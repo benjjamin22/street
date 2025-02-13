@@ -14,7 +14,7 @@
       "headers":{
       "Access-Control-Allow-Origin":"*"
       },
-      "destination": "index.js",
+      "dest": "index.js",
       "methods":[
           "GET",
           "POST",
