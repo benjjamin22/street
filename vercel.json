@@ -9,26 +9,17 @@
       "use": "@vercel/static"
   }],
 
-  "routes": [{
-      "src": "/(.*)",
-      "headers":{
-      "Access-Control-Allow-Origin":"*"
-      },
-      "dest": "index.js",
-      "methods":[
-          "GET",
-          "POST",
-          "PUT",
-          "DELETE",
-          "PATCH",
-          "OPTIONS"
-        ]
-  }, {
-      "src": "/",
-      "dest": "public"
-  }, {
-      "src": "/(.*)",
-      "dest": "public/$1"
-  }]
+  "routes":[
+    {
+        "headers":{
+            "Access-Control-Allow-Origin":"*",
+            "Access-Control-Allow-Methods":"GET,POST,PUT,DELETE,OPTIONS",
+            "Access-Control-Allow-Headers":"X-Requested-with, Content-Type,Accept"
+    },
+    "src":"/.*",
+    "dest":"/index.js"
+    }
+]
 
 }
+
