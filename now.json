@@ -1,0 +1,26 @@
+{
+    "version":2,
+    "public":true,
+    "build":[
+        {
+            "src":"index.js",
+            "use":"@now/nôde-server",
+            "config":{
+                "includeFiles":[
+                    "**.nip"
+                ]
+            }
+        }
+    ],
+    "routes":[
+        {
+            "headers":{
+                "Access-Control-Allow-Origin":"*",
+                "Access-Control-Allow-Methods":"GET,POST,PUT,DELETE,OPTIONS",
+                "Access-Control-Allow-Headers":"X-Requested-with, Content-Type,Accept"
+        },
+        "src":"/.*",
+        "dest":"/index.js"
+        }
+]
+}

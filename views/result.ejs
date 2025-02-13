@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="styo.css">
+	<link rel="stylesheet" href="cardgrid.css">
+    
+    <title>singleuser</title>
+</head>
+<style type="text/css">
+	html, body {
+		font-family: sans-serif;
+	}
+	.controls {
+		margin: 1em 0;
+	}
+	#text {
+		width: 90%;
+	}
+	#output_text {
+		cursor: copy;
+		font-family: monospace;
+		-webkit-font-smoothing: none;
+		font-smooth: never;
+		text-rendering: optimizeSpeed;
+		line-height: 1.1;
+		white-space: nowrap;
+		
+		
+	}
+
+	
+	/* Fix for monospace fonts where the space is not the same width as the block characters */
+	#output_text span {
+		display: inline-block;
+		width: 1ch;
+	}
+	#output_img, #output_svg {
+		cursor: copy;
+		
+		
+		
+	}
+	#output_img img, #output_svg svg {
+		max-width: 50vw;
+		
+		
+	
+	}
+	</style>
+
+<body >
+	
+    <div style="display: flex; margin-top: 0rem;">
+        <div style="list-style-type: none;color:black; margin-top: 0rem; ">
+            <div class="user-profile nimated ounceInLeft" id="html-content-holder" >
+                <div class="profile-top" style="margin-top: 0rem;justify-content: center;background-image: url('op.JPG');background-repeat: no-repeat;background-size: cover;padding: 20px 0px;" >
+					<div style="margin-bottom: 1rem;justify-content: center;align-items: center;text-align: center;">
+						<div style="margin-top: .5rem;">
+							<img class="flip" style="height: 100px;
+							width: 100px;
+							border-radius: 50px;
+							margin-top: -30px;
+							justify-content: center;
+							position: relative;
+							margin: auto;
+							column-gap: 0rem;
+							text-align: center;
+							justify-content: center;
+							margin-bottom: 0%;
+							" src="btn.jpg" alt="">         
+						</div>
+						<h2 style="font-size: 22px;font-weight: bolder;color: white;">Imo Ministry of Education</h2>
+						<h2 style="font-size: 28px;font-weight: bolder;color: black" >Secondary Education</h2>
+						<h2 style="font-size: 28px;font-weight: bolder;color: black" >Management Board</h2>
+						<p style="font-size: 20px;font-weight: bolder;color: yellow">I.S.E.M.B</p>
+					</div>
+					<div style="justify-content: center; justify-self: center;margin-bottom: 10px;">
+                    <div class="profile-info" style="border: 1px solid #cec3c3;padding: 15px 20px;background-color: transparent;height: 22rem;;
+					width: 19rem;background: rgba(255, 255, 255, 0.1);box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;"><img style="margin-top: 0rem;justify-self: center;" src="<%=Picturepath%>" >
+					</div>
+				</div>
+					<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+						<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+						<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+					</svg>
+                    <div class="profile-info">
+                        <h1 style="color:white;text-align:center;margin-bottom:7px;margin-top: 7px; line-height:2rem;font-size: 3rem;font-weight: bolder;"><%=Name%> </h1> 
+						<h2 style="color:white;text-align:center;margin-bottom:0px;line-height:2rem;font-size: 1.4rem;font-weight: bolder;"><%=Mname%>  <%=Surname%></h2> 
+                        <h1 style="margin-top:3px;margin-bottom:0px;line-height:1rem;color: yellow;text-align: center;">>>>NIN:-<%=NIN%><<<</h1>
+                    </div>
+                </div>
+                <h1 style="font-size:17px;margin-top:10px;text-align:center;padding:0 0rem;">SCHOOL</h1>
+                <div class="profile-bottom" style="margin-bottom:-25px";>
+                    <div style="flex-direction:column;margin:-11px 0px;" class="profile-info">      
+                        <h1 style="Font-size:19px;text-align: center;font-weight: bolder;">- <%=School%>  -</h1>                               
+                        </div>
+                         <h1 style="font-size:15px;margin-top:20px;text-align:center;padding:0 0rem;">DATE OF BIRTH/CLASS</h1>
+                         <div style="flex-direction:column;"class="profile-info"> 
+                                <h1 style="margin-top:-1.5px;font-size:19px;font-weight: bolder;">- <%=Day%> <%=Month%> <%=Year%>-</h1>
+                              
+                            </div> 
+                    </div>
+                    <div class="profile-bottom">
+                        <div style="display:flex;">
+                            <div style="width:31%;margin:0 1px;">
+                                <h1 style="font-size:12px;margin-top:-5px;text-align:center;padding:0 1.5rem;">B/G</h1>
+                                <div class="profile-info">
+                                <h1 style="color:black;padding:0 .8rem;margin-top:-5px;font-weight: bolder;"><%=Bloodgroup%></h1>
+                                </div>
+                            </div>
+                            <div style="width:31%;margin:0 1px;">
+                            <h1 style="font-size:12px;margin-top:-5px;text-align:center;padding:0 1rem;">STATUS</h1>
+                                <div style="flex-direction:column;"class="profile-info">
+                                <h1 style="color:black;padding:0 .8rem;margin-top:-5px;font-weight: bolder;"><%=Status%></h1>
+								<h1 style="margin:1px 0px;color:red;font-size:15px;font-weight: bolder;">- <%=Presentclass%> -</h1>
+                                </div>
+                            </div>
+                            <div style="width:31%;margin:0 1px;">
+                                <h1 style="font-size:12px;margin-top:-5px;text-align:center;padding:0 1rem;">GENDER</h1>
+                                <div class="profile-info">
+                                <h1 style="color:black;padding:0 .8rem;margin-top:-5px;font-weight: bolder;"><%=Gender%></h1>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h1 style="font-size:12px;margin-top:-8px;text-align:center;padding:0 0rem;">STATE OF ORIGIN/LGA</h1>
+                            <div style="flex-direction:column;"class="profile-info"> 
+                                  <h1 style="margin-top:-1px;font-weight: bold;">- <%=State%> -</h1>
+                                  <h1 style="margin:-5px;color:red;font-size:15px;margin: 1px 0px;font-weight: bolder;">- <%=HometownCommunity%> -</h1>
+                            </div> 
+                            
+                            
+							<div style="display:flex;margin:-9px 0px;;justify-content:center;margin-right: 1rem;">
+								<div>
+									<h1 style="font-size:12px;margin:0px;text-align:center;">PARENT NO 1:</h1>
+									<div class="profile-info">
+										<a style="text-decoration: none;" href="Tel:${user.Phoneno1}">
+											<div style="margin-left: 0px;"class="p1">
+												<p2 style="margin-left: 0px;"><%=ParentPhoneNo%></p2>
+											</div>
+										</a>                   
+									</div>
+								</div>
+								<div>
+									<h1 style="font-size:12px;margin:0px;text-align:center;">PARENT NO 2:</h1>
+									<div class="profile-info">
+										<a style="text-decoration: none;" href="Tel:${user.Phoneno2}">
+											<div style="margin-left: 0px;"class="p2">
+												<p2 style="margin-left: 0px;" id="facttextgg"><%=ParentPhoneNo2%></p2>
+											</div>
+										</a>                   
+									</div>                           
+								</div>
+							</div>
+				</div>  
+				   
+			</div>
+			
+		</div>
+	
+	</div>
+	
+</div>
+
+</body>
+</html>
