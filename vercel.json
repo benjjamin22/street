@@ -9,7 +9,7 @@
       "use": "@vercel/static"
   }],
 
-  "rewrites": [{
+  "routes": [{
       "source": "/(.*)",
       "headers":{
       "Access-Control-Allow-Origin":"*"
