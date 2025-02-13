@@ -5,7 +5,7 @@ var router = express.Router();
 
 const accounts = JSON.parse(fs.readFileSync('./data.json','utf-8'));
 
-router.post('/', function handler(req, res,next) {
+router.get('/', function handler(req, res,next) {
     try{
         const foundUser = accounts.find((data) => req.body.Password === data.pine || req.body.ParentPhoneNo === data.ParentPhoneNo);
         if (foundUser ) {

@@ -7,7 +7,7 @@ var bodyParser = require ('body-parser');
 var fs = require ( 'fs') ;
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-//var login = require('./routes/login');
+var login = require('./routes/login');
 //var id = require('./routes/id');
 //var post = require('./routes/post');
 
@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//app.use('/login', login);
+app.use('/login', login);
 //app.use('/:id', id);
 //app.use('/post', post);
 
